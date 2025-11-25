@@ -1,0 +1,10 @@
+proxies:
+  - { name: "香港01", server: hk1.nodefree.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 12345678-1234-1234-1234-123456789012 }
+  - { name: "日本02", server: jp2.nodefree.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 12345678-1234-1234-1234-123456789012 }
+  - { name: "美国03", server: us3.nodefree.org, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 12345678-1234-1234-1234-123456789012 }
+
+proxy-groups:
+  - { name: 🚀 节点选择, type: select, proxies: ["香港01","日本02","美国03"] }
+
+rules:
+  - MATCH,🚀 节点选择
